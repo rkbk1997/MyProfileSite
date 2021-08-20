@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Portfoio Details</h2>
+          <ol>
+            <li><a href="/index">Home</a></li>
+            <li>Portfoio Details</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="portfolio-details-container">
+
+          <div class="owl-carousel portfolio-details-carousel">
+            <img src="{{pageData.img1.url}}" class="img-fluid" alt="">
+            <img src="{{pageData.img2.url}}" class="img-fluid" alt="">
+            <img src="{{pageData.img3.url}}" class="img-fluid" alt="">
+          </div>
+
+          <div class="portfolio-info">
+            <h3>Project information</h3>
+            <ul>
+              <li><strong>Category</strong>: {{pageData.category}}</li>
+              <li><strong>Client</strong>: {{pageData.client}}</li>
+              <li><strong>Environment</strong>: {{pageData.environment}}</li>
+              <li><strong>Role</strong>: {{pageData.role}}</li>
+              <li><strong>Project Start Date</strong>: {{pageData.project_date}}</li>
+              <li><strong>Project End Date</strong>: {{pageData.project_end_date}}</li>
+              <li><strong>Project URL</strong>: <a href="{{pageData.project_url}}">{{pageData.titile}}</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="portfolio-description">
+          <h2>{{pageData.heading}}</h2>
+          <p>
+            {{pageData.des}}
+          </p>
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+ {% endblock %}
